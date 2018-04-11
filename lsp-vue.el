@@ -241,7 +241,7 @@
   "Enable lsp-vue for all major-modes supported by ‘vue-mode’."
   (interactive)
   (lsp-vue-enable)
-  (when (and lsp-enable-flycheck (featurep 'lsp-flycheck) (featurep 'vue-mode))
+  (when (and lsp-ui-flycheck-enable (featurep 'lsp-flycheck) (featurep 'vue-mode))
     (require 'vue-mode)
     (dolist (mode-settings vue-modes)
       (lsp-flycheck-add-mode (plist-get mode-settings ':mode)))))
